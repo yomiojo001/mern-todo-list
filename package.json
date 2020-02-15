@@ -1,0 +1,33 @@
+{
+  "name": "mern-todo-list",
+  "version": "1.0.0",
+  "description": "mern todo list",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \" npm run server \" \" npm run client \"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yomiojo001/mern-todo-list.git"
+  },
+  "author": "devmike",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yomiojo001/mern-todo-list/issues"
+  },
+  "homepage": "https://github.com/yomiojo001/mern-todo-list#readme",
+  "dependencies": {
+    "concurrently": "^5.1.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
