@@ -22,6 +22,10 @@ db.once('open', () => {
     console.log("MongoDB database connection established!");
 })
 
+app.get('/server', (req,res) =>{
+    res.json({hello: 'receiving backend data'})
+})
+
 
 // production path
 if(process.env.NODE_ENV === "production"){
